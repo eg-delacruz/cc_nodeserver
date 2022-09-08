@@ -46,10 +46,10 @@ const generateContract = async ({ cliente, campana, contrato }) => {
       format: 'A4',
       paginationOffset: 2,
       timeout: 30000,
-      // phantomPath: path.resolve(
-      //   process.cwd(),
-      //   'node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs'
-      // ),
+      phantomPath: path.resolve(
+        process.cwd(),
+        'node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs'
+      ),
       header: {
         height: '20mm',
         contents: `<div style="font-family: 'Open Sans', sans-serif; padding-right: 52px; padding-top: 10px; font-size: 12px; text-align: right;"><strong>No. Contrato: </strong>${contractNumber}<br><br><br></div>`,
@@ -78,7 +78,7 @@ const generateContract = async ({ cliente, campana, contrato }) => {
         });
       });
   } catch (error) {
-    throw new Error('[Client/contract controller]' + error);
+    throw new Error('[Client/contract controller]', error);
   }
 };
 
