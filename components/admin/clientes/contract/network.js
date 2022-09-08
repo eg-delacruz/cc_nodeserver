@@ -18,6 +18,7 @@ const fileSystem = require('fs');
 //PDF Contract - Generation and fetching of the data
 router.post('/', async function (req, res) {
   try {
+    console.log(process.cwd());
     //This saves the pdf in the server. If the name does never change
     //when a new contract is created, the previous file is erased
     await controller.generateContract(req.body);
