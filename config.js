@@ -13,7 +13,7 @@ const config = {
   dbURL: url,
   port: process.env.PORT || 5000,
   host: process.env.HOST || 'http://localhost',
-  publicRoute: process.env.PUBLIC_ROUTE || '/app',
+  publicRoute: process.env.PUBLIC_ROUTE || '/',
   filesRoute: process.env.FILES_ROUTE || 'files',
 };
 
