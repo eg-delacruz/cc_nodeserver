@@ -47,7 +47,7 @@ const generateContract = async ({ cliente, campana, contrato }) => {
       paginationOffset: 2,
       timeout: 30000,
       phantomPath: path.resolve(
-        process.cwd(),
+        // process.cwd(),
         'node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs'
       ),
       header: {
