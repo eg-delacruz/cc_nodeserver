@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 router(app);
 
 //Todas las rutas que pidamos a partir de app/etc, las irá a buscar a la carpeta "public"
-app.use(config.publicRoute, express.static('public'));
+//app.use(config.publicRoute, express.static('public'));
 
 //Asignamos un puerto al servidor
 server.listen(config.port, () => {
