@@ -7,6 +7,11 @@ const cors = require('cors');
 const router = require('./network/routes');
 const db = require('./db');
 
+//CronJobs
+const {
+  send_email_to_incomplete_verif_users,
+} = require('./services/cron-jobs/send_email_to_incomplete_verif_users');
+
 db(config.dbURL);
 
 //Permitirá ver el servidor desde un frontend
@@ -28,4 +33,7 @@ server.listen(config.port, () => {
   console.log(
     'La aplicación está escuchando en ' + config.host + ':' + config.port
   );
+
+  //Cron Job: Send email to incomplete verified users
+  send_email_to_incomplete_verif_users();
 });
