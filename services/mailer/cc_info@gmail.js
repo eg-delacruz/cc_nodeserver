@@ -1,9 +1,9 @@
-const job = async () => {
-  console.log('Executing...');
+const sendIncompleteVerifEmail = async () => {
+  console.log('[Mailer] Sending email...');
   //await delay(5000);
-  console.log('Done!');
+  console.log('[Mailer] Email sent!');
 };
 
 module.exports = {
-  job,
+  sendIncompleteVerifEmail,
 };
