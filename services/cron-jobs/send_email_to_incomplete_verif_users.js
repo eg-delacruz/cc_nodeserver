@@ -8,9 +8,8 @@ const {
 const send_email_to_incomplete_verif_users = () => {
   let isRunning = false;
   const email_sender = new CronJob(
-    //TODO: uncomment this
-    //process.env.UNCOMPLETED_VERIF_EMAIL_SENDING_FREQUENCY
-    '*/5 * * * *', //Every 5th min
+    process.env.UNCOMPLETED_VERIF_EMAIL_SENDING_FREQUENCY,
+    //'*/5 * * * *', //Every 5th min
     async () => {
       if (!isRunning) {
         isRunning = true;

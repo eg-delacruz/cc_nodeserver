@@ -27,7 +27,7 @@ const sendIncompleteVerifEmail = async (userEmail) => {
     <table cellspacing="0" cellpadding="0">
       <tr>
         <td style="border-radius: 2px;" bgcolor="#ad2146">
-          <a href="campuscanvas.net/auth/login" target="_blank" style="padding: 8px 12px; border: 1px solid #ad2146;border-radius: 5px;font-family: Arial, Helvetica, sans-serif;font-size: 14px; color: #ffffff;text-decoration: none;font-weight:bold;display: inline-block;">
+          <a href="https://www.campuscanvas.net/auth/login" style="padding: 8px 12px; border: 1px solid #ad2146;border-radius: 5px;font-family: Arial, Helvetica, sans-serif;font-size: 14px; color: #ffffff;text-decoration: none;font-weight:bold;display: inline-block;">
             Completar verificación           
           </a>
         </td>
