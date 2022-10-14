@@ -12,7 +12,6 @@ const sendVerifEmailAndDeleteAcc = async () => {
 
   //Sending emails
   unverifAccs.map(async (account) => {
-    console.log(account.email);
     await sendIncompleteVerifEmail(account.email);
     await store.delete(account);
   });
