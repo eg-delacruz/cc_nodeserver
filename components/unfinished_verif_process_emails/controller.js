@@ -16,7 +16,6 @@ const sendVerifEmailAndDeleteAcc = async () => {
     await sendIncompleteVerifEmail(account.email);
     await store.delete(account);
   });
-  console.log('El cron job se ejecutó');
 };
 
 module.exports = { sendVerifEmailAndDeleteAcc };

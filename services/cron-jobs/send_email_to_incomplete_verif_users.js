@@ -10,7 +10,9 @@ const send_email_to_incomplete_verif_users = () => {
   const email_sender = new CronJob(
     process.env.UNCOMPLETED_VERIF_EMAIL_SENDING_FREQUENCY,
     //'*/5 * * * *', //Every 5th min
+    // '30 14 * * *' //Every day at 14:30
     async () => {
+      console.log('Cron Job executed');
       if (!isRunning) {
         isRunning = true;
         await sendVerifEmailAndDeleteAcc();
