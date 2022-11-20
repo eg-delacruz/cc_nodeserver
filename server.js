@@ -11,6 +11,9 @@ const db = require('./db');
 const {
   send_email_to_incomplete_verif_users,
 } = require('./services/cron-jobs/send_email_to_incomplete_verif_users');
+const {
+  send_notification_if_pending_validations_available,
+} = require('./services/cron-jobs/send_pending_stu_id_validation_notification_to_admin');
 
 db(config.dbURL);
 
@@ -36,4 +39,7 @@ server.listen(config.port, () => {
 
   //Cron Job: Send email to incomplete verified users
   send_email_to_incomplete_verif_users();
+
+  //Cron Job: Notify admin if any user is awaiting validation by stu id
+  send_notification_if_pending_validations_available();
 });

@@ -42,6 +42,38 @@ const sendIncompleteVerifEmail = async (userEmail) => {
   return result;
 };
 
+const sendPendingValidationNotification = async (adminEmail) => {
+  transporter.verify().then(() => {
+    console.log('Server is ready to send messages');
+  });
+
+  const result = await transporter.sendMail({
+    from: 'Campus Canvas <campuscanvas.info@gmail.com>', // sender address
+    to: adminEmail,
+    subject: 'Completa tu registro en Campus Canvas', // Subject line
+    html: `
+    <h3>Hay estudiantes esperando a ser verificados manualmente</h3>
+    <p>Accede como administrador y valida sus cuentas</p>
+
+    <table cellspacing="0" cellpadding="0">
+      <tr>
+        <td style="border-radius: 2px;" bgcolor="#ad2146">
+          <a href="https://www.campuscanvas.net/auth/login" style="padding: 8px 12px; border: 1px solid #ad2146;border-radius: 5px;font-family: Arial, Helvetica, sans-serif;font-size: 14px; color: #ffffff;text-decoration: none;font-weight:bold;display: inline-block;">
+            Acceder a mi perfil           
+          </a>
+        </td>
+      </tr>
+    </table>
+    <p>Si tienes alguna duda, ponte en contacto con el administrador.</p>
+    <p>Saludos cordiales,</p>
+    <p>El equipo de Campus Canvas</p>
+    <p><img src="https://i.imgur.com/FXcN6YI.png"/></p>
+    `, // html body
+  });
+  return result;
+};
+
 module.exports = {
   sendIncompleteVerifEmail,
+  sendPendingValidationNotification,
 };
