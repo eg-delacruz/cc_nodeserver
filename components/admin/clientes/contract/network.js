@@ -10,6 +10,7 @@ const {
 //Securing route with secret key
 const SECRET_KEY = process.env.SERVER_SECRET_KEY;
 
+//Route currently not being used, leave it for future examples
 router.post('/', async function (req, res) {
   if (req.headers.secret_key === SECRET_KEY) {
     return successResponse(req, res, 'Todo OK', 201);
