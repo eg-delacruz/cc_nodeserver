@@ -50,7 +50,7 @@ const sendPendingValidationNotification = async (adminEmail) => {
   const result = await transporter.sendMail({
     from: 'Campus Canvas <campuscanvas.info@gmail.com>', // sender address
     to: adminEmail,
-    subject: 'Completa tu registro en Campus Canvas', // Subject line
+    subject: 'Hay estudiantes esperando a ser verificados', // Subject line
     html: `
     <h3>Hay estudiantes esperando a ser verificados manualmente</h3>
     <p>Accede como administrador y valida sus cuentas</p>
