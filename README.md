@@ -2,4 +2,4 @@
 
 Pure NodeJS server for Campus Canvas project
 
-Stored in render.com
+Stored in railway.app

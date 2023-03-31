@@ -20,7 +20,7 @@ const sendIncompleteVerifEmail = async (userEmail) => {
     to: userEmail,
     subject: 'Completa tu registro en Campus Canvas', // Subject line
     html: `
-    <h3>¡Estás a muy poco de poder pedir tu <b>Campus Box</b> y acceder a promociones increíbles!</h3>
+    <h3>¡Estás a muy poco de acceder a descuentos y promociones exclusivas!</h3>
     <p>Aún no has completado tu verificación como estudiante en Campus Canvas.</p>
     <p>Inicia sesión en nuestra aplicación web, completa la verificación y disfruta de nuestros beneficios: </p>
 
